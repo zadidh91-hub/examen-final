@@ -1,0 +1,230 @@
+
+:root{
+  --bg:#f5f6f8;
+  --card:#fff;
+  --border:#d8dde3;
+  --text:#222;
+  --muted:#677185;
+
+  --primary:#1e88e5;
+  --primary-dark:#1565c0;
+  --danger:#ef4444;
+  --magenta:#d946ef;
+  --dark:#33373d;
+
+  --head-blue:#0e64b6;
+  --head-text:#fff;
+
+  --shadow:0 4px 14px rgba(0,0,0,.07);
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  font-family:system-ui;
+  background:var(--bg);
+}
+
+/* ===== BARRA SUPERIOR ===== */
+.actions{
+  display:flex;
+  justify-content:space-between;
+  padding:12px;
+  background:#fff;
+  border-bottom:1px solid var(--border);
+}
+
+.actions-right{
+  display:flex;
+  gap:10px;
+}
+
+.btn{
+  border:0;
+  border-radius:6px;
+  padding:8px 12px;
+  font-weight:600;
+  cursor:pointer;
+}
+
+.btn-dark{background:var(--dark);color:#fff}
+.btn-primary{background:var(--primary);color:#fff}
+.btn-danger{background:var(--danger);color:#fff}
+.btn-magenta{background:var(--magenta);color:#fff}
+
+/* ===== CONTENEDOR ===== */
+.container{
+  max-width:1180px;
+  margin:20px auto;
+  padding:0 14px;
+}
+
+/* ===== TARJETAS ===== */
+.card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:10px;
+  box-shadow:var(--shadow);
+  padding:14px;
+  margin-bottom:14px;
+
+  /* ⬅️ Evita que el resumen se recorte cuando lo subimos */
+  overflow: visible;
+}
+
+.card.no-padding{
+  padding:0;
+}
+
+/* ===== FORMULARIO CLIENTE ===== */
+.grid{
+  display:grid;
+  gap:12px;
+}
+
+.grid-5{
+  grid-template-columns:repeat(5,1fr);
+}
+
+.field label{
+  display:block;
+  font-size:.8rem;
+  margin-bottom:6px;
+}
+
+.input-wrap,
+.input-search{
+  display:flex;
+  border:1px solid var(--border);
+  border-radius:8px;
+}
+
+.input-wrap input,
+.input-search input{
+  border:0;
+  padding:8px;
+  width:100%;
+}
+
+.btn-select,
+.btn-search{
+  border:0;
+  background:#eef2f7;
+  padding:8px;
+}
+
+/* ===== BOTONES AGREGAR / NUEVO ===== */
+.head-actions-top{
+  display:flex;
+  justify-content:flex-end;
+  gap:12px;
+  padding:10px 12px;
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:10px 10px 0 0;
+  margin-bottom:10px;
+}
+
+.btn-blue-outline{
+  background:transparent;
+  border:1px solid var(--head-blue);
+  color:var(--head-blue);
+  font-weight:700;
+}
+
+/* ===== TABLA ===== */
+.items-head{
+  background:var(--head-blue);
+  color:var(--head-text);
+  padding:10px;
+}
+
+.head-labels{
+  display:grid;
+  grid-template-columns:repeat(7,1fr);
+  font-size:.8rem;
+  font-weight:700;
+}
+
+.table-row{
+  display:grid;
+  grid-template-columns:repeat(7,1fr) 40px;
+  padding:10px;
+  border-bottom:1px solid var(--border);
+}
+
+.table-row input{
+  width:100%;
+  padding:6px;
+}
+
+.del-btn{
+  background:var(--danger);
+  color:#fff;
+  border:0;
+  border-radius:50%;
+  width:26px;
+  height:26px;
+}
+
+/* ===== LAYOUT GENERAL INFERIOR ===== */
+.flex{
+  display:flex;
+  align-items:flex-start;
+  gap:16px; /* separa el formulario del resumen */
+}
+
+.flex-grow{
+  flex:1;
+}
+
+/* ===== RESUMEN (AL COSTADO DEL DESCUENTO Y MÁS ARRIBA) ===== */
+.summary{
+  width:320px;
+  margin-left:auto;           /* a la derecha */
+  position:sticky;
+  top:20px;
+
+  /* 🚀 SUBIDA VISUAL: MUCHO MÁS ARRIBA */
+  transform: translateY(-260px); /* ajusta -240/-280/-300 según tu vista */
+  z-index:10;
+
+  /* estética similar a tu referencia */
+  border-radius:10px;
+  box-shadow:0 8px 24px rgba(0,0,0,.08);
+}
+
+.summary-title{
+  font-weight:800;
+  margin-bottom:10px;
+}
+
+.summary-line,
+.summary-total{
+  display:flex;
+  justify-content:space-between;
+  padding:8px 0;
+}
+
+.summary-total{
+  font-weight:800;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width:900px){
+  .flex{
+    flex-direction:column;
+    gap:10px;
+  }
+
+  .summary{
+    width:100%;
+    transform:none;    /* en móvil no la subimos para evitar solapes */
+    position:static;   /* deja de ser sticky en pantallas pequeñas */
+    top:auto;
+    margin-top:10px;
+    z-index:1;
+    box-shadow:var(--shadow);
+  }
+}

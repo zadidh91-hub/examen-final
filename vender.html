@@ -1,66 +1,168 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sistema de Ventas - Vender</title>
-  <link rel="stylesheet" href="css/styles.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Emisión de Comprobantes</title>
+  <link rel="stylesheet" href="system.css">
 </head>
 <body>
 
-  <header class="topbar">
-    <div class="brand">Sistema de Ventas</div>
-    <div class="topbar-right">
-      <span id="userLabel" class="muted">Usuario: demo</span>
-      <button id="btnLogout" class="btn ghost">Salir</button>
+<!-- ====== BARRA SUPERIOR ====== -->
+<section class="actions">
+  <button class="btn btn-dark">
+    <span class="dot"></span> NUEVA FACTURA
+  </button>
+
+  <div class="actions-right">
+    <button class="btn btn-primary">EMITIR FACTURA</button>
+    <button class="btn btn-danger">EMITIR BOLETA</button>
+    <button class="btn btn-magenta">NOTA DE VENTA</button>
+  </div>
+</section>
+
+<main class="container">
+
+  <!-- ====== CLIENTE ====== -->
+  <div class="card">
+    <div class="grid grid-5">
+      <div class="field">
+        <label>R.U.C.</label>
+        <div class="input-wrap">
+          <button class="btn-select">▾</button>
+          <input type="text">
+        </div>
+      </div>
+
+      <div class="field">
+        <label>N° Documento</label>
+        <div class="input-search">
+          <input type="text" value="10405242112">
+          <button class="btn-search">🔍</button>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Nombres / Razón Social</label>
+        <input type="text" value="HUBEL SOLIS">
+      </div>
+
+      <div class="field">
+        <label>Dirección</label>
+        <input type="text" value="POR AHÍ">
+      </div>
+
+      <div class="field">
+        <label>Celular</label>
+        <input type="text" value="981021731">
+      </div>
     </div>
-  </header>
-
-  <div class="layout">
-    <aside class="sidebar">
-      <div class="side-title">Menú</div>
-      <nav class="nav">
-        <a class="nav-item" href="inicio.html" data-page="inicio">🏠 Inicio</a>
-        <a class="nav-item" href="vender.html" data-page="vender">🧾 Vender</a>
-      </nav>
-    </aside>
-
-    <main class="workarea">
-      <section class="card">
-        <h2 class="h2">Vender</h2>
-        <p class="muted">Pantalla base para registrar una venta (demo).</p>
-
-        <div class="sale-row" style="margin-top:12px;">
-          <div class="sale-field">
-            <label>Producto</label>
-            <input id="producto" type="text" placeholder="Ej: Tornillo 1/4" />
-          </div>
-
-          <div class="sale-field">
-            <label>Cantidad</label>
-            <input id="cantidad" type="number" min="1" value="1" />
-          </div>
-
-          <div class="sale-field">
-            <label>Precio</label>
-            <input id="precio" type="number" min="0" step="0.10" placeholder="0.00" />
-          </div>
-        </div>
-
-        <div class="sale-actions">
-          <button id="btnAdd" class="btn ghost">Agregar (demo)</button>
-          <button id="btnPay" class="btn primary small">Cobrar (demo)</button>
-        </div>
-
-        <div class="mini muted" style="margin-top:10px;">
-          Aquí luego conectas carrito, stock, impresión, etc.
-        </div>
-
-      </section>
-    </main>
   </div>
 
-  <script src="js/layout.js"></script>
-  <script src="js/vender.js"></script>
+  <!-- ====== BOTONES ARRIBA ====== -->
+  <div class="head-actions head-actions-top">
+    <button class="btn btn-blue-outline">
+      🛒 AGREGAR PRODUCTOS O SERVICIOS
+    </button>
+    <button class="btn btn-primary">
+      🧾 NUEVO PRODUCTO O SERVICIO
+    </button>
+  </div>
+
+  <!-- ====== TABLA ====== -->
+  <div class="card no-padding">
+    <div class="items-head">
+      <div class="head-labels">
+        <div>código</div>
+        <div>cantidad</div>
+        <div>uni/medida</div>
+        <div>descripción</div>
+        <div>precio unitario</div>
+        <div>valor unitario</div>
+        <div>sub total</div>
+      </div>
+    </div>
+
+    <div class="table-row">
+      <div><input></div>
+      <div><input type="number" value="1"></div>
+      <div><input value="NIU"></div>
+      <div><input value="POLO"></div>
+      <div><input value="5.00"></div>
+      <div><input value="4.24"></div>
+      <div>4.24</div>
+      <button class="del-btn">⨂</button>
+    </div>
+  </div>
+
+  <!-- ================= PARTE INFERIOR AGREGADA ================= -->
+  <div class="card bottom-left">
+
+    <div class="field">
+      <label class="center-label">DESCUENTO</label>
+      <div class="discount-line">
+        <div class="discount-type">
+          <button class="chip chip-green active">S/</button>
+          <button class="chip chip-gray">%</button>
+        </div>
+        <input type="number" value="0">
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="center-label">MÉTODO DE PAGO:</label>
+      <select>
+        <option>En efectivo</option>
+        <option>Transferencia</option>
+        <option>Tarjeta</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label class="center-label">OBSERVACIONES</label>
+      <textarea rows="4"></textarea>
+    </div>
+
+    <div class="region-row">
+      <div class="region-item">
+        <div class="region-label">¿Bienes Región Selva?</div>
+        <button class="toggle-btn toggle-no">NO</button>
+      </div>
+
+      <div class="region-item">
+        <div class="region-label">¿Servicios Región Selva?</div>
+        <button class="toggle-btn toggle-no">NO</button>
+      </div>
+    </div>
+
+    <div class="radios-row">
+      <label class="radio">
+        <input type="radio" name="envio">
+        SOLO FIRMAR E IMPRIMIR
+      </label>
+
+      <label class="radio">
+        <input type="radio" name="envio" checked>
+        ENVIAR A SUNAT AHORA MISMO
+      </label>
+    </div>
+
+  </div>
+  <!-- ================= FIN PARTE AGREGADA ================= -->
+
+  <!-- ====== RESUMEN (NO SE TOCA) ====== -->
+  <div class="flex">
+    <div class="flex-grow"></div>
+    <aside class="card summary">
+      <div class="summary-title">RESUMEN</div>
+      <div class="summary-line"><span>SUBTOTAL</span><span>S/ 5.00</span></div>
+      <div class="summary-line"><span>OP. GRAVADAS</span><span>S/ 4.24</span></div>
+      <div class="summary-line"><span>DESCUENTO</span><span>S/ 0.00</span></div>
+      <div class="summary-line"><span>IGV (18%)</span><span>S/ 0.76</span></div>
+      <div class="summary-total"><span>TOTAL</span><span>S/ 5.00</span></div>
+    </aside>
+  </div>
+
+</main>
 </body>
 </html>
