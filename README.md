@@ -6,6 +6,7 @@ Construcción de Software
 
 ### Modalidad
 Trabajo grupal – Simulacion de entorno real de trabajo
+Incluir en el readme los nombres de los integrantes
 
 ---
 
@@ -58,3 +59,7 @@ Si el grupo lo considera pertinente, puede usar cualquier otra tecnologia como R
 
 │ └── vender.js # Lógica de ventas
 
+## 5. Evaluacion 
+- Se debera de enviar el enlace git al whastapp personal del docente.
+- Al finalizar el tiempo el docente se acercara para consultar que tecnologia usaron.
+- 
