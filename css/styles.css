@@ -7,9 +7,17 @@
 }
 
 /* FONDO OSCURO */
-body {
+.fondo {
+  position: relative;
   height: 100vh;
-  background: linear-gradient(135deg, #0b1a2a, #020c1b);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-image: url("../fondo.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* CENTRADO TOTAL */
