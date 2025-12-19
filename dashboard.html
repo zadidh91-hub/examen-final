@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard Ventas</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+
+<!-- TOP BAR -->
+<header class="topbar">
+    <div class="top-left">
+        <span class="badge red">PRUEBAS</span>
+        <span class="badge blue">TC - Venta: 3.371 Compra: 3.363</span>
+    </div>
+    <div class="top-right">Usuario</div>
+</header>
+
+<main class="container">
+
+    <!-- BOTONES -->
+    <div class="actions">
+        <button class="btn blue">📄 Emitir Factura</button>
+        <button class="btn orange">🧾 Emitir Boleta</button>
+        <button class="btn purple">📝 Nota de Venta</button>
+    </div>
+
+    <!-- TARJETAS -->
+    <section class="cards">
+
+        <div class="card">
+            <div class="icon blue"><img src="img/calendar.png"></div>
+            <div>
+                <p>FACTURAS</p>
+                <h3>S/ 5.00</h3>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="icon red"><img src="img/calendar.png"></div>
+            <div>
+                <p>BOLETAS</p>
+                <h3>S/ 0.00</h3>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="icon blue"><img src="img/calendar.png"></div>
+            <div>
+                <p>NOTAS DE VENTA</p>
+                <h3>S/ 0.00</h3>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="icon blue"><img src="img/calendar.png"></div>
+            <div>
+                <p>NOTAS DE CRÉDITO</p>
+                <h3>S/ 0.00</h3>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="icon yellow"><img src="img/calendar.png"></div>
+            <div>
+                <p>NOTAS DE DÉBITO</p>
+                <h3>S/ 0.00</h3>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="icon green"><img src="img/calendar.png"></div>
+            <div>
+                <p>TOTAL NETO</p>
+                <h3>S/ 5.00</h3>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- GRAFICOS -->
+    <section class="charts">
+
+        <div class="chart big">
+            <h4>📈 Gráfico de Ventas</h4>
+            <div class="area-chart"></div>
+        </div>
+
+        <div class="chart small">
+            <h4>📊 Los más vendidos</h4>
+            <div class="donut"></div>
+
+            <ul class="legend">
+                <li><span class="dot blue"></span> Polo</li>
+                <li><span class="dot red"></span> Mouse inalámbrico M280 Logitech</li>
+                <li><span class="dot green"></span> Pantalonetas</li>
+                <li><span class="dot yellow"></span> Laptop Lenovo i8</li>
+                <li><span class="dot blue"></span> Impresora Xerox DC250</li>
+            </ul>
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+    © 2025 AWS PERU TIC. Todos los derechos reservados.
+</footer>
+
+</body>
+</html>
