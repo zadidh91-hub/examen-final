@@ -1,34 +1,33 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sistema de Ventas - Login</title>
-  <link rel="stylesheet" href="css/styles.css" />
+  <meta charset="utf-8">
+  <title>Sistema de Ventas - index</title>
+
+  
+  <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
 
-  <main class="center">
-    <section class="card login-card">
-      <h1 class="h1">Sistema de Ventas</h1>
-      <p class="muted">Examen Final Construccion de Software. Presiona “Ingresar”.</p>
+  <div class="fondo">
+    <div class="login-box">
 
-      <div class="field">
-        <label for="user">Usuario</label>
-        <input id="user" type="text" placeholder="Ej: admin" autocomplete="username" />
+      <!-- LOGO -->
+      <div class="logo">
+        <img src="logo.png" alt="Logo GF">
       </div>
 
-      <div class="field">
-        <label for="pass">Contraseña</label>
-        <input id="pass" type="password" placeholder="••••••••" autocomplete="current-password" />
-      </div>
+      <!-- INPUT USUARIO -->
+      <input type="text" placeholder="Usuario">
 
-      <button id="btnLogin" class="btn primary">Ingresar</button>
+      <!-- INPUT CONTRASEÑA -->
+      <input type="password" placeholder="Contraseña">
 
-      <p class="mini muted">Front End — codigo inicial</p>
-    </section>
-  </main>
+      <!-- BOTON DE INGRESO-->
+      <button>INGRESAR AL SISTEMA »</button>
 
-  <script src="js/app.js"></script>
+    </div>
+  </div>
+
 </body>
 </html>
